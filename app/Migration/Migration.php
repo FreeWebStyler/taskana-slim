@@ -24,8 +24,7 @@ class Migration extends AbstractMigration {
           'charset'   => 'utf8',
           'collation' => 'utf8_unicode_ci',*/
           'driver'    => 'sqlite',
-          //'database'  => __DIR__ . '/../db/taskana.sqlite',
-          'database'  => '/home/alex/www/taskana/db/taskana.sqlite',
+          'database'  => __DIR__ . '/../../db/taskana.sqlite',
           'prefix'    => ''
         ]);
 

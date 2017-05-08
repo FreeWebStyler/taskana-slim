@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-//use Slim\Views\Twig as View;
+use App\Models\User;
 use Slim\Views\Twig as View;
 use \Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -11,14 +11,21 @@ class HomeController extends Controller
     protected $container;
 
     //public function __construct(View $view){
-    public function __construct($container){
+    /*public function __construct($container){
         $this->view = $container->view;
         $this->db   = $container->db;
         //debug($container->db);
         //die;
-    }
+    }*/
 
     public function index($request, $response){
+        //debug($this);        die;
+        /*User::create([
+            'name'  => 'Alex',
+            'email' => 'nevidlovskyi@yandex.ru',
+            'password' => '123'
+        ]);*/
+        //$user = User::where('id', 4)->first(); debug($user->email);
 
 /*$table = Capsule::table('users');
 
@@ -33,15 +40,12 @@ class HomeController extends Controller
         //$user = $this->db->table('users')->where('id', 1);
         //$user = $this->db;
         //$user = $this->view;
-        //echo '<pre>';
+
         //var_dump($this);
         //var_dump($this->container->db);
         //var_dump($this->db);
-        //var_dump($user);
-        //die;
-        $user = $this->db->table('users')->find(1);
-        var_dump($user);
-        die;
+
+        //$user = $this->db->table('users')->find(1);
         return $this->view->render($response, 'home.twig');
     }
 }

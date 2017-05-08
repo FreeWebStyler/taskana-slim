@@ -1,1 +1,1 @@
-# taskana
+# Taskana - tasks manager

@@ -8,8 +8,9 @@ class Controller
     protected $container;
 
     public function __construct($container){
-
-        $tihs->container = $container;
+        $this->container    = $container;
+        $this->view         = $container->view;
+        $this->db           = $container->db;
     }
 
     public function __get($property){
