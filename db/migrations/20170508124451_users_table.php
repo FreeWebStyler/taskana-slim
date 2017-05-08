@@ -32,6 +32,7 @@ class UsersTable extends Migration
             // Auto-increment id
             $table->increments('id');
             $table->string('name');
+            //$table->string('email');
             $table->string('email')->unique();
             $table->string('password');
             // Required for Eloquent's created_at and updated_at columns

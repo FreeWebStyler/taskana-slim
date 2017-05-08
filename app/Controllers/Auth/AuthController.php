@@ -20,7 +20,7 @@ class AuthController extends Controller
         //pred($this->router);
 
         $validation = $this->validator->validate($request, [
-            'email' => v::noWhitespace()->notEmpty()->email(),
+            'email' => v::noWhitespace()->notEmpty()->email()->emailAvailable(),
             'name'  => v::noWhitespace()->notEmpty()->alpha(),
             'password' => v::noWhitespace()->notEmpty()
         ]);
