@@ -11,7 +11,9 @@ use Respect\Validation\Validator as v;
 
 class AuthController extends Controller
 {
-    public function getSignUp($requset, $response){
+    public function getSignUp($request, $response){
+		//debug($this->csrf->getTokenNameKey());die;
+		//debug($request->getAttribute('csrf_value'));die;
         return $this->view->render($response, 'auth/signup.twig');
     }
 

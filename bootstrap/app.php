@@ -72,7 +72,13 @@ $container['AuthController'] = function($container) use ($app){
     return new \App\Controllers\Auth\AuthController($container);
 };
 
+$container['csrf'] = function($container){
+	return new \Slim\Csrf\Guard;
+};
+
 $app->add(new \App\Middleware\ValidationErrors($container));
 $app->add(new \App\Middleware\PreviousInput($container));
+
+$app->add($container->csrf);
 
 v::with('App\\Validation\\Rules\\');
