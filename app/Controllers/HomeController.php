@@ -11,18 +11,19 @@ class HomeController extends Controller
     protected $container;
 
     //public function __construct(View $view){
-    /*public function __construct($container){
-        $this->view = $container->view;
-        $this->db   = $container->db;
+    public function __construct($container){
+        $this->container = $container;
+        //$this->view = $container->view;
+        //$this->db   = $container->db;
         //debug($container->db);
         //die;
-    }*/
+    }
 
     public function index($request, $response){
         //debug($this);        die;
         /*User::create([
             'name'  => 'Alex',
-            'email' => 'nevidlovskyi@yandex.ru',
+            'email' => 'mymail@domain.com',
             'password' => '123'
         ]);*/
         //$user = User::where('id', 4)->first(); debug($user->email);
@@ -37,7 +38,8 @@ class HomeController extends Controller
 });*/
 
         //return 'Home controller';
-        //$user = $this->db->table('users')->where('id', 1);
+        $user = $this->container->db->table('users')->where('id', 1)->first();
+        debug($user->email); die;
         //$user = $this->db;
         //$user = $this->view;
 
