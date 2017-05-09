@@ -23,3 +23,4 @@ And maybe `php composer.phar update`
 
 
 //My github project (not finished yet) based on this lessons - https://github.com/FreeWebber/taskana
+Lessons - https://www.youtube.com/watch?v=RhcQXFeor9g

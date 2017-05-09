@@ -78,6 +78,7 @@ $container['csrf'] = function($container){
 
 $app->add(new \App\Middleware\ValidationErrors($container));
 $app->add(new \App\Middleware\PreviousInput($container));
+$app->add(new \App\Middleware\CsrfView($container));
 
 $app->add($container->csrf);
 
